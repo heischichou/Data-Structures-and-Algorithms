@@ -18,7 +18,8 @@ void initBST(Tree * T){
 // checks if the given data exists in the tree, returns 1 if present, otherwise, 0
 int isMember(Tree T, int data){
 	for(; T != NULL && T->data != data; T = (data < T->data) ? T->lchild : T->rchild){}
-    return (T != NULL && T->data == data) ? 1 : 0;
+	
+	return (T != NULL && T->data == data) ? 1 : 0;
 }
 
 // checks if the given data exists in the tree, returns 1 if present, otherwise, 0 - recursive version

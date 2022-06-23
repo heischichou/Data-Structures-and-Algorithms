@@ -89,7 +89,7 @@ void enqueue(Queue * Q, int data){
 	temp->vertex = data;
 	temp->link = NULL;
 	
-	if(Q->rear != NULL) { Q->rear->link = temp; }
+	if(Q->rear != NULL){ Q->rear->link = temp; }
 	Q->rear = temp;
 
 	if(Q->front == NULL){

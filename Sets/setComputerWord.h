@@ -12,7 +12,7 @@ void initSet(Set * S){
 
 // check if a given element is a member of the set
 int member(Set S, int n){
-	return ((S & 1 << n) > 0) ? 1 : 0; 
+    return ((S & 1 << n) > 0) ? 1 : 0; 
 }
 
 // insert an element into the set
@@ -46,8 +46,9 @@ Set Difference(Set A, Set B){
 
 // display the set
 void displaySet(Set S){
-	Set r;
+    Set r;
     int size = sizeof(Set) * 8;
+
     printf("The bit pattern of %d is: ", S);
     for(r = 1 << size - 1; r > 0; r >>= 1){
         (S & r) ? printf("1") : printf("0");

@@ -74,9 +74,9 @@ Set* Intersection(Set A, Set B){
 	        for(b = 0; b <= B.count; b++){
 	            if(A.elem[a] == B.elem[b]){
 	                C->elem[++C->count] = A.elem[a];
-	            }
-	        }
-	    }
+				}
+			}
+		}
 	}
 
     return C;
@@ -121,7 +121,7 @@ void displaySet(Set S){
 
 // search for an element in the set using the binary search method
 int binarySearch(Set S, int elem){
-    int low, mid, high;
+	int low, mid, high;
     
 	for(low = 0, high = S.count - 1, mid = (low + high) / 2; low < high && S.elem[mid] != elem; mid = (low + high) / 2){
 		(elem > S.elem[mid]) ? low = mid + 1 : high = mid - 1;

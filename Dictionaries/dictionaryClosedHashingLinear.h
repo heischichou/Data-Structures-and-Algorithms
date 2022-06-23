@@ -20,7 +20,7 @@ void initDictionary(Dictionary D){
 
 // get the hash value
 int Hash(int data){
-    return data % 10;
+	return data % 10;
 }
 
 // check if a given element exsists in the dictionary
@@ -40,7 +40,7 @@ void insertDictionary(Dictionary D, int data){
 		for(x = (x + 1) % SIZE; x != hash && D[x] != EMPTY; x = (x + 1) % SIZE){}
 	}
 	
-	if(D[x] == EMPTY) {
+	if(D[x] == EMPTY){
 		D[x] = data;
 	}
 }
@@ -48,11 +48,12 @@ void insertDictionary(Dictionary D, int data){
 // delete an element from the dictionary
 void deleteDictionary(Dictionary D, int data){
 	int hash = Hash(data), x = hash;
-	if(D[x] != data) {
+
+	if(D[x] != data){
 		for(x = (x + 1) % SIZE; x != hash && D[x] != data; x = (x + 1) % SIZE){}
 	}
 	
-	if(D[x] == data) {
+	if(D[x] == data){
 		D[x] = DELETED;
 	}
 }
@@ -69,7 +70,8 @@ void displayGroup(Dictionary D, int index){
 			}
 	    }
 	}
-    printf("\n");
+	
+	printf("\n");
 }
 
 // display the dictionary

@@ -64,8 +64,8 @@ void deleteElem(Dictionary * D, int data){
 	if(D->nodes[x].data == data){
 		D->nodes[x].data = DELETED;
 	} else {
-		for(; x != -1 && D.nodes[x].data != data; x = D.nodes[x].link){}
-		if(D.nodes[x].data == data){
+		for(; x != -1 && D->nodes[x].data != data; x = D->nodes[x].link){}
+		if(D->nodes[x].data == data){
 			D->nodes[x].data = DELETED;
 		}
 	}
@@ -73,12 +73,12 @@ void deleteElem(Dictionary * D, int data){
 
 // display the dictionary
 void displayDictionary(Dictionary D){
-    int x, y;
-    
-    for(x = 0; x <= SYNONYM; x++){
-        printf("Group %d: ", x);
-        
-        if(D.nodes[x].data == EMPTY){
+	int x, y;
+
+	for(x = 0; x <= SYNONYM; x++){
+		printf("Group %d: ", x);
+		
+		if(D.nodes[x].data == EMPTY){
 			printf("Empty");
 		} else {
 			for(y = x; y != -1; y = D.nodes[y].link){
@@ -86,7 +86,7 @@ void displayDictionary(Dictionary D){
 			}
 		}
 		
-        printf("\n");
-    }
+		printf("\n");
+	}
 }
 #endif

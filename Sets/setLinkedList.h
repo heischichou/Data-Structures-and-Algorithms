@@ -38,7 +38,7 @@ void insertElem(Set * S, unsigned int data){
     	temp->data = data;
 	    temp->link = *S;
 	    *S = temp;
-	}
+    }
 }
 
 // delete an element from the given set
@@ -49,10 +49,10 @@ void deleteElem(Set * S, unsigned int member){
     	if((*trav)->data == member){
             temp = *trav;
             *S = temp->link;
-            
+
             free(*S);
         } else {
-            trav = &(*trav)->link;  
+            trav = &(*trav)->link;
         }
 	}
 }

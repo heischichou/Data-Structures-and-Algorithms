@@ -102,7 +102,6 @@ int isFullV4(StackV4 S){
 	return (S->top == SIZE - 1) ? 1 : 0;
 }
 
-
 // push to the stack - version 1
 void pushV1(StackV1 * S, int data){
 	if(S->top < SIZE - 1){
