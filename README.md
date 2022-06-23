@@ -1,4 +1,4 @@
-# Data Strucures and Algorithms
+# Data Structures and Algorithms
 This is a compilation/personal library of all the codes for the data structures and algorithms I have learned and created throughout my college course CIS 2101 - Data Structures and Algorithms.
 
 ## Setup
